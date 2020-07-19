@@ -17,27 +17,24 @@ const AppRoutes: React.FC = () => (
     screenOptions={{
       headerShown: true,
       cardStyle: { backgroundColor: '#EBEEF8' },
+      headerTransparent: true,
+      headerTitle: () => <Image source={Logo} />,
     }}
     initialRouteName="Dashboard"
   >
     <App.Screen
       options={{
         headerShown: true,
-        headerTransparent: true,
-        headerTitle: () => <Image source={Logo} />,
       }}
       name="Dashboard"
       component={Dashboard}
     />
     <App.Screen
       options={{
-        headerTransparent: true,
-        headerTitle: () => <Image source={Logo} />,
         headerBackTitleVisible: false,
         headerLeftContainerStyle: {
           marginLeft: 20,
         },
-
         headerBackImage: () => <FeatherIcon name="chevron-left" size={24} />,
       }}
       name="Cart"
